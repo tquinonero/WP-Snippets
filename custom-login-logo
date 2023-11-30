@@ -1,0 +1,12 @@
+function my_custom_login_logo() {
+    $new_logo_url = 'http://bluebeatsdev-dev.stackstaging.com/wp-content/uploads/2023/10/vikki-davis-fitness-logo-1.webp'; // Replace with your new image URL
+    echo '<style type="text/css"> 
+        h1 a {
+            background-image: url(' . esc_url($new_logo_url) . ') !important;
+            background-size: 400px auto; /* Set the width to 200px and maintain aspect ratio */
+            width: 400px; /* Set the width to 200px */
+            height: auto; /* Automatically adjust the height to maintain aspect ratio */
+        }
+    </style>';
+}
+add_action('login_head', 'my_custom_login_logo');
