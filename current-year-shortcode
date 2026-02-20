@@ -1,0 +1,6 @@
+<?php
+// Use [current_year] shortcode to display the current year
+function current_year_shortcode() {
+    return date('Y');
+}
+add_shortcode('current_year', 'current_year_shortcode');
